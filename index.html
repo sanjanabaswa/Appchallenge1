@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Interactive App</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="container-fluid">
+<br>
+<br>
+
+    <h1>GPA Estimator</h1>
+    <br>
+    <br>
+
+   
+
+    <p>Enter grade 1:
+      <input id="firstNumber" type="number">
+    </p>
+
+    <p>Enter grade 2:
+      <input id="secondNumber" type="number">
+    </p>
+
+    <p>Enter grade 3:
+      <input id="thirdNumber" type="number">
+    </p>
+
+    <button id="clicker" class="btn btn-primary">Click me!</button>
+
+    <p id="result"></p>
+
+  </main>
+
+  <script>
+    console.log('SCRIPT START')
+    console.log('Declare testable functions.....................')
+    function avg(x, y,z) {
+      return (x + y+ z)/3
+    }
+    console.log('Defined avg=' + avg)
+    console.log('Declare event listeners .......................')
+    document.getElementById('clicker').addEventListener('click', function () {
+      //const s = document.getElementById('guest').value
+      const i = parseInt(document.getElementById('firstNumber').value)
+      console.log('i=' + i)
+      const j = parseInt(document.getElementById('secondNumber').value)
+      console.log('j=' + j)
+      const k = parseInt(document.getElementById('thirdNumber').value)
+      console.log('k=' + k)
+      const ans =  ' your avg is ' + avg(i, j,k) + '.'
+      document.getElementById('result').innerHTML = ans
+    })
+    console.log('SCRIPT END')
+  </script>
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+</body>
+
+</html>
